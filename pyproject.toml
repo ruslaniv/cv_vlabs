@@ -8,8 +8,47 @@ packages = [{include = "cv_server"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+# List all dependecies in ALPHABETICAL ORDER
+attrs = "~23.1.0" # https://pypi.org/project/attrs/
+duckdb = "~0.8.1" # https://pypi.org/project/duckdb/
+fastapi = "~0.101.1" # https://pypi.org/project/fastapi/
+matplotlib = "~3.7.2" # https://pypi.org/project/matplotlib/
+numpy = "~1.25.1" # https://pypi.org/project/numpy/
+pandas = "~2.0.3" # https://pypi.org/project/pandas/
+psycopg = {extras = ["binary"], version = "^3.1.9"}
+pyarrow = "~12.0.1" # https://pypi.org/project/pyarrow/
+pydantic = "~2.1.1" # https://pypi.org/project/pydantic/
+pydantic-settings = "~2.0.2" # https://pypi.org/project/pydantic-settings/
+python-dotenv = "~1.0.0" # https://pypi.org/project/python-dotenv/
+rtoml = "~0.9.0" # https://pypi.org/project/rtoml/
+seaborn = "~0.12.2" # https://pypi.org/project/seaborn/
+sentry-sdk = "~1.29.2" # https://pypi.org/project/sentry-sdk/
 
+[tool.poetry.group.dev.dependencies]
+black = "~23.7.0" # https://pypi.org/project/black/
+isort = "~5.12.0" # https://pypi.org/project/isort/
+loguru = "~0.7.0" # https://pypi.org/project/loguru/
+mypy = "~1.5.1" # https://pypi.org/project/mypy/
+pylint = "~2.17.5" # https://pypi.org/project/pylint/
+tqdm = "~4.65.0" # https://pypi.org/project/tqdm/
+
+[tool.poetry.group.jupyter.dependencies]
+jupyterlab = "~4.0.3" # https://pypi.org/project/jupyterlab/
+jupytext = "~1.14.7" # https://pypi.org/project/jupytext/
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+locust = "2.15.1" # https://pypi.org/project/locust/
+pytest = "~7.4.0" # https://pypi.org/project/pytest/
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.jupytext]
+formats = "notebooks///ipynb,notebooks///py:percent,src///py"
+
+[tool.isort]
+profile = "black"
