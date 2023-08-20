@@ -1,9 +1,10 @@
-# Proper torch installation
+# Установка библиотеки PyTorch
 
-PyTorch is completely broken in Poetry, have to use pip
+В Poetry установка новых версий библиотеки не работает, см:
 https://github.com/python-poetry/poetry/issues/6409
+надо использовать pip.
 
-None of this works in `pyproject.toml`: 
+Ни одно из этих не работает в `pyproject.toml`: 
 
 torch = {url = "https://download.pytorch.org/whl/nightly/cu121/torch-2.1.0.dev20230819%2Bcu121-cp311-cp311-linux_x86_64.whl", platform = "linux", python = "~3.11"}
 

@@ -10,7 +10,6 @@ class ComputeDevice(NamedTuple):
     device_name: str
 
 
-@lru_cache()
 def get_compute_device() -> ComputeDevice:
     """Получение информации об устройстве для векторизации.
 

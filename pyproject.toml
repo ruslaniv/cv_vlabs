@@ -9,18 +9,22 @@ readme = "README.md"
 python = "^3.11"
 # List all dependecies in ALPHABETICAL ORDER
 attrs = "~23.1.0" # https://pypi.org/project/attrs/
+dlib = "19.24.2" # https://pypi.org/project/dlib/
 duckdb = "~0.8.1" # https://pypi.org/project/duckdb/
+face_recognition = "~1.3.0" # https://pypi.org/project/face-recognition/
 fastapi = "~0.101.1" # https://pypi.org/project/fastapi/
 gunicorn = "~21.2.0" # https://pypi.org/project/gunicorn/
 loguru = "~0.7.0" # https://pypi.org/project/loguru/
 matplotlib = "~3.7.2" # https://pypi.org/project/matplotlib/
 numpy = "~1.25.1" # https://pypi.org/project/numpy/
+opencv-python = "~4.8.0.76" # https://pypi.org/project/opencv-python/
 pandas = "~2.0.3" # https://pypi.org/project/pandas/
 psycopg = {extras = ["binary"], version = "^3.1.9"}
 pyarrow = "~12.0.1" # https://pypi.org/project/pyarrow/
 pydantic = "~2.1.1" # https://pypi.org/project/pydantic/
 pydantic-settings = "~2.0.2" # https://pypi.org/project/pydantic-settings/
 python-dotenv = "~1.0.0" # https://pypi.org/project/python-dotenv/
+python-multipart = "~0.0.6" # https://pypi.org/project/python-multipart/
 rtoml = "~0.9.0" # https://pypi.org/project/rtoml/
 seaborn = "~0.12.2" # https://pypi.org/project/seaborn/
 sentry-sdk = {extras = ["fastapi"], version = "~1.29.2"} # https://pypi.org/project/sentry-sdk/

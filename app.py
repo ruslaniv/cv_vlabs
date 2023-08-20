@@ -7,7 +7,7 @@ from loguru import logger
 
 from config.config import settings as app_settings
 from config.tags_metadata import tags_metadata
-from server.routes.v1 import healthcheck
+from server.routes.v1 import detection, healthcheck
 
 app = FastAPI(
     title="AI/ML сервис распознавания лиц",
@@ -19,7 +19,7 @@ app = FastAPI(
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 app.include_router(healthcheck.router, prefix=app_settings.API_PREFIX)
-
+app.include_router(detection.router, prefix=app_settings.API_PREFIX)
 
 sentry_sdk.init(
     dsn=app_settings.SENTRY_DSN,
