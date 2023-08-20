@@ -1,0 +1,16 @@
+# Sort the lines in alphabetical order!
+
+# Directories
+/.git/
+/.idea/
+/.mypy_cache
+/.pytest_cache
+/.virtual_documents/
+/__pycache__/
+/storage/*
+
+# Files
+
+# Exceptions to *include* into Docker image
+#!/storage/model/ модель монтируется отдельно на севрере, через инструменты деплоя контейнеров
+

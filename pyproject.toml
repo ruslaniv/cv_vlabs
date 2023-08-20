@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["ruslaniv <r.ishtuganov@gmail.com>"]
 readme = "README.md"
-packages = [{include = "cv_server"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -12,6 +11,8 @@ python = "^3.11"
 attrs = "~23.1.0" # https://pypi.org/project/attrs/
 duckdb = "~0.8.1" # https://pypi.org/project/duckdb/
 fastapi = "~0.101.1" # https://pypi.org/project/fastapi/
+gunicorn = "~21.2.0" # https://pypi.org/project/gunicorn/
+loguru = "~0.7.0" # https://pypi.org/project/loguru/
 matplotlib = "~3.7.2" # https://pypi.org/project/matplotlib/
 numpy = "~1.25.1" # https://pypi.org/project/numpy/
 pandas = "~2.0.3" # https://pypi.org/project/pandas/
@@ -22,12 +23,12 @@ pydantic-settings = "~2.0.2" # https://pypi.org/project/pydantic-settings/
 python-dotenv = "~1.0.0" # https://pypi.org/project/python-dotenv/
 rtoml = "~0.9.0" # https://pypi.org/project/rtoml/
 seaborn = "~0.12.2" # https://pypi.org/project/seaborn/
-sentry-sdk = "~1.29.2" # https://pypi.org/project/sentry-sdk/
+sentry-sdk = {extras = ["fastapi"], version = "~1.29.2"} # https://pypi.org/project/sentry-sdk/
+uvicorn = "~0.23.2" # https://pypi.org/project/uvicorn/
 
 [tool.poetry.group.dev.dependencies]
 black = "~23.7.0" # https://pypi.org/project/black/
 isort = "~5.12.0" # https://pypi.org/project/isort/
-loguru = "~0.7.0" # https://pypi.org/project/loguru/
 mypy = "~1.5.1" # https://pypi.org/project/mypy/
 pylint = "~2.17.5" # https://pypi.org/project/pylint/
 tqdm = "~4.65.0" # https://pypi.org/project/tqdm/
@@ -42,6 +43,11 @@ optional = true
 [tool.poetry.group.test.dependencies]
 locust = "2.15.1" # https://pypi.org/project/locust/
 pytest = "~7.4.0" # https://pypi.org/project/pytest/
+
+[[tool.poetry.source]]
+name = "torch_cuda"
+url = "https://download.pytorch.org/whl/nightly/cu121"
+priority = "explicit"
 
 [build-system]
 requires = ["poetry-core"]

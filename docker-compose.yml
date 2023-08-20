@@ -1,0 +1,10 @@
+services:
+  cv_server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cv_server
+    image: cv_server:0.0.1
+    ports:
+      - 8189:8189
+
