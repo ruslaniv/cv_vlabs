@@ -17,7 +17,7 @@ gunicorn = "~21.2.0" # https://pypi.org/project/gunicorn/
 loguru = "~0.7.0" # https://pypi.org/project/loguru/
 matplotlib = "~3.7.2" # https://pypi.org/project/matplotlib/
 numpy = "~1.25.1" # https://pypi.org/project/numpy/
-opencv-python = "~4.8.0.76" # https://pypi.org/project/opencv-python/
+opencv-python-headless = "~4.8.0.76" # https://pypi.org/project/opencv-python/
 pandas = "~2.0.3" # https://pypi.org/project/pandas/
 psycopg = {extras = ["binary"], version = "^3.1.9"}
 pyarrow = "~12.0.1" # https://pypi.org/project/pyarrow/
